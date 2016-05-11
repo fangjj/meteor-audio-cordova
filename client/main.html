@@ -1,0 +1,35 @@
+<head>
+    <title>Audio Test</title>
+</head>
+
+<body>
+    {{> main}}
+</body>
+
+<template name="main">
+    <div style="margin: 10px">
+        <center>
+            <h1>Meteor Audio Test</h1>
+            <p>{{origin}}</p>
+        </center>
+
+        <hr>
+
+        <center>
+            <i class="backward fa fa-4x fa-step-backward" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+            {{#if isPlaying}}
+                <i class="pause fa fa-4x fa-pause" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+            {{else}}
+                <i class="play fa fa-4x fa-play" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+            {{/if}}
+            <i class="stop fa fa-4x fa-stop" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+            <i class="forward fa fa-4x fa-step-forward" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+        </center>
+
+        <hr>
+
+        <button class="release btn btn-lg btn-primary">Release</button>
+        <button class="download btn btn-lg btn-primary">Download</button>
+        {{duration}}
+    </div>
+</template>
